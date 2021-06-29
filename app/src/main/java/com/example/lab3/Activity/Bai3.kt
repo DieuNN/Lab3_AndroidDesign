@@ -6,16 +6,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.BaseAdapter
-import android.widget.GridView
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.lab3.Model.Brand
 import com.example.lab3.R
 import org.w3c.dom.Text
 
 class Bai3 : AppCompatActivity() {
+
     var adapter:BrandAdapter?= null
     var brandList = ArrayList<Brand>()
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +21,15 @@ class Bai3 : AppCompatActivity() {
         setContentView(R.layout.activity_bai3)
         val gridView = findViewById<GridView>(R.id.gridViewBai3)
 
+        brandList.add(Brand("Android", R.drawable.android))
+        brandList.add(Brand("Facebook", R.drawable.facebook))
+        brandList.add(Brand("Apple", R.drawable.apple))
+        brandList.add(Brand("Chrome", R.drawable.chrome))
+        brandList.add(Brand("Firefox", R.drawable.firefox))
+        brandList.add(Brand("Dell", R.drawable.firefox))
+        brandList.add(Brand("Blogger", R.drawable.blogger))
+        brandList.add(Brand("Microsoft", R.drawable.microsoft))
+        brandList.add(Brand("XBox", R.drawable.xbox))
         brandList.add(Brand("Android", R.drawable.android))
         brandList.add(Brand("Facebook", R.drawable.facebook))
         brandList.add(Brand("Apple", R.drawable.apple))
@@ -62,17 +69,37 @@ class Bai3 : AppCompatActivity() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            var brand = this.brandList[position]
-            var view = LayoutInflater.from(context).inflate(R.layout.grid_view_item, parent, false)
-            var brandImage = view.findViewById<ImageView>(R.id.imageBrandLogo)
-            brandImage.setImageResource(brand.brandImage!!)
-            var brandName = view.findViewById<TextView>(R.id.lblBrandName)
-            brandName.text= brand.brandName
-            return view
-        }
+//            if(convertView == null) {
+//                var firstCardHolder = FirstCardHolder()
+                var brand = this.brandList[position]
+                var convertView =
+                    LayoutInflater.from(context).inflate(R.layout.grid_view_item, parent, false)
+                var brandImage = convertView.findViewById<ImageView>(R.id.imageBrandLogo)
+                brandImage.setImageResource(brand.brandImage!!)
+                var brandName = convertView.findViewById<TextView>(R.id.lblBrandName)
+                brandName.text = brand.brandName
+//                convertView.tag = firstCardHolder
 
+//            } else {
+//                convertView.tag
+//            }
+            return convertView!!
+        }
     }
 
-
+//    class FirstCardHolder {
+//
+//        var image:ImageView?= null
+//        var name:TextView? = null
+//
+//        constructor(image: ImageView?, name: TextView?) {
+//            this.image = image
+//            this.name = name
+//        }
+//
+//        constructor()
+//
+//
+//    }
 
 }

@@ -1,9 +1,10 @@
-package com.example.lab3
+package com.example.lab3.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.lab3.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val bai1:Button = findViewById(R.id.btnBai1)
         bai1.setOnClickListener {
-            startActivity(Intent(this,Bai1::class.java))
+            startActivity(Intent(this, Bai1::class.java))
         }
 
         val bai2:Button = findViewById(R.id.btnBai2)

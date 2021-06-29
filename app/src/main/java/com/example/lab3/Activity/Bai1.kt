@@ -1,11 +1,10 @@
-package com.example.lab3
+package com.example.lab3.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import android.widget.SimpleAdapter
-import java.util.*
-import java.util.logging.Level.parse
+import com.example.lab3.R
 import kotlin.collections.ArrayList
 import kotlin.collections.HashMap
 
@@ -29,7 +28,11 @@ class Bai1 : AppCompatActivity() {
         list.add(hashMap)
 
         val from = arrayOf("ten", "tuoi", "hinh")
-        val to = intArrayOf(R.id.lblNameSimpleAdapter, R.id.lblAgeSimpleAdapter, R.id.imgSimpleAdapter)
+        val to = intArrayOf(
+            R.id.lblNameSimpleAdapter,
+            R.id.lblAgeSimpleAdapter,
+            R.id.imgSimpleAdapter
+        )
 
         val adapter:SimpleAdapter = SimpleAdapter(this, list, R.layout.simple_adapter_row, from, to)
         val listView:ListView = findViewById(R.id.listViewSimpleAdapter)

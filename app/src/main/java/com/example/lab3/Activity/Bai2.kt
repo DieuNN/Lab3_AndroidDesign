@@ -15,6 +15,9 @@ class Bai2 : AppCompatActivity() {
 
         var list:ArrayList<SocialMedia> = ArrayList()
         list.add(SocialMedia("Facebook", R.drawable.facebook))
+        list.add(SocialMedia("Twitter", R.drawable.twitter))
+        list.add(SocialMedia("Microsoft", R.drawable.microsoft))
+        list.add(SocialMedia("Blogger", R.drawable.blogger))
 
         val spinner = findViewById<Spinner>(R.id.spinner)
         val adapter = SocialMediaAdapter(this, list )

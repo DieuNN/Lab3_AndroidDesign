@@ -9,5 +9,7 @@ class Brand {
         this.brandImage = brandImage
     }
 
+    constructor()
+
 
 }

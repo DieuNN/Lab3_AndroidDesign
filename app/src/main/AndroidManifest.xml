@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab3">
+        <activity android:name=".Activity.MyCustomAdapter"></activity>
         <activity android:name=".Activity.Bai4" />
         <activity android:name=".Activity.Bai3" />
         <activity android:name=".Activity.Bai2" />

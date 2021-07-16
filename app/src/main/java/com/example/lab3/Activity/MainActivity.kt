@@ -1,9 +1,9 @@
 package com.example.lab3.Activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import com.example.lab3.R
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +32,11 @@ class MainActivity : AppCompatActivity() {
         val bai4:Button = findViewById(R.id.btnbai4)
         bai4.setOnClickListener {
             startActivity(Intent(this, Bai4::class.java))
+        }
+
+        val myCustomAdapter:Button = findViewById(R.id.myCustomAdapter)
+        myCustomAdapter.setOnClickListener {
+            startActivity(Intent(this, MyCustomAdapter::class.java))
         }
     }
 }

@@ -12,7 +12,7 @@ class Database(context:Context?) : SQLiteOpenHelper(context, DATABASE_NAME, null
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        val tablePhone = "CREATE TABLE $TABLE_PHONE (NAME TEXT, PRICE REAL, IMAGE INTEGER)"
+        val tablePhone = "CREATE TABLE $TABLE_PHONE (NAME TEXT PRIMARY KEY, PRICE REAL, IMAGE INTEGER)"
         db!!.execSQL(tablePhone)
     }
 

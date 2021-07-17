@@ -25,14 +25,6 @@ class MyCustomAdapter : AppCompatActivity() {
         phoneDB.newPhone(Phone("Galaxy S21", 21.000, R.drawable.samsung_galaxy_s21_plus))
         phoneDB.newPhone(Phone("Galaxy Note 20", 19.990, R.drawable.samsing_galaxy_note_20))
         phoneDB.newPhone(Phone("Asus Vivobook", 15.990, R.drawable.laptop_asus_vivobook))
-        phoneDB.newPhone(Phone("iPhone 11.1", 14.490, R.drawable.iphone_12))
-        phoneDB.newPhone(Phone("Galaxy S21.1", 21.000, R.drawable.samsung_galaxy_s21_plus))
-        phoneDB.newPhone(Phone("Galaxy Note 20.1", 19.990, R.drawable.samsing_galaxy_note_20))
-        phoneDB.newPhone(Phone("Asus Vivobook.1", 15.990, R.drawable.laptop_asus_vivobook))
-        phoneDB.newPhone(Phone("iPhone 11.2", 14.490, R.drawable.iphone_12))
-        phoneDB.newPhone(Phone("Galaxy S21.2", 21.000, R.drawable.samsung_galaxy_s21_plus))
-        phoneDB.newPhone(Phone("Galaxy Note 20.2", 19.990, R.drawable.samsing_galaxy_note_20))
-        phoneDB.newPhone(Phone("Asus Vivobook.2", 15.990, R.drawable.laptop_asus_vivobook))
 
 
 
